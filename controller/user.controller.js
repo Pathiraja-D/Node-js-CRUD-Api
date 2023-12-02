@@ -32,11 +32,17 @@ router.post('/',(req,res)=>{
 });
 
 router.put('/:id',validateDbId,(req,res)=>{
-
+    userCrud.update(req.params.id,req.body).then(data=>{
+        if(data) res.send(data)
+        else raiseRecord404Error(req, res)
+    })
 })
 
 router.delete('/:id',validateDbId,(req,res)=>{
-
+    userCrud.delete(req.params.id).then(data=>{
+        if(data) res.send(data)
+        else raiseRecord404Error(req, res)
+    })
 })
 
 module.exports = router;
