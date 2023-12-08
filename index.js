@@ -16,6 +16,6 @@ app.use('/api/users',userRoutes);
 connectDb().then(async () => {
   console.log('MongoDb connected');
     app.listen(3000, () => {
-    console.log(`Server is listening on port localhost:${port}/api/users/`);
+    console.log(`Server is listening on port localhost:${port}/api/users`);
   });
 }).catch(err => console.log(err));
