@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const dbUri = 'mongodb+srv://pathiraja:Password%40123@traveljournal.bqhxkrh.mongodb.net/Travel_Journal?retryWrites=true&w=majority';
 
-mongoose.set('strictQuery',false);
+const dbUri = 'mongodb+srv://pathirajadnew:Password%40123@mydatabases.vo4eo4v.mongodb.net/NewAppDb?retryWrites=true&w=majority'
+
 
 module.exports = () => {
-    return mongoose.connect(dbUri,{useNewUrlParser:true,useUnifiedTopology:true})
+    return mongoose.connect(dbUri);
 }
