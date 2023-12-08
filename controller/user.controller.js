@@ -9,7 +9,7 @@ const {validateDbId,raiseRecord404Error} = require('../middleware');
 
 
 router.get('/',validateDbId,(req,res)=>{
-    userCrud.getAll().then(data => res.send(data)).catch(err=>console.log(err))
+    console.log("App Deployed");
 })
 
 router.get('/:id',(req,res)=>{
