@@ -4,7 +4,10 @@ const bodyParser = require('body-parser');
 const connectDb = require('./config/db');
 const userRoutes = require('./controller/user.controller');
 const app = express();  
-const port = 3000;
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 const cors = require('cors');
 
 app.use(cors());
