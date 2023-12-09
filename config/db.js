@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-const dbUri = 'mongodb+srv://pathirajadnew:Password%40123@mydatabases.vo4eo4v.mongodb.net/NewAppDb?retryWrites=true&w=majority'
+const dbUri = process.env.MONGO_URI;
 
 
 module.exports = () => {
